@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+{% block data %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Вы уверены что хотите удалить "{{object}}"?</p>
+        <a href="{% url 'projects' %}">Назад</a>
+        <input type="submit" value="Принять" />
+    </form>
+{% endblock %}
